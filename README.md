@@ -9,3 +9,7 @@ Second minor glitch was that partrt was erroring because of behavior of sh.  I c
 I may try using rust with the rpal crate.  Stay tuned.
 
 This looks useful: https://raspberrypi.stackexchange.com/questions/40105/access-gpio-pins-without-root-no-access-to-dev-mem-try-running-as-root
+
+For the purpose of bell swing detection, I'm expecting pulses of about 10msec in duration.  This means we will want a rise time of about 1msec.  Cat3 cable has a capacitance of roughly 18 pF / foot.  If the cables to the bells are roughly 40 ft long, that means about 720 pF, and we want rise time of 1msec, that means R should be around 1.5kohm.  [I currently have 4.7kohm resistors available, so I expect in the short term to see rise time of around 3 msec, which is likely tolerable].
+
+
