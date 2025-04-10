@@ -12,4 +12,14 @@ This looks useful: https://raspberrypi.stackexchange.com/questions/40105/access-
 
 For the purpose of bell swing detection, I'm expecting pulses of about 10msec in duration.  This means we will want a rise time of about 1msec.  Cat3 cable has a capacitance of roughly 18 pF / foot.  If the cables to the bells are roughly 40 ft long, that means about 720 pF, and we want rise time of 1msec, that means R should be around 1.5kohm.  [I currently have 4.7kohm resistors available, so I expect in the short term to see rise time of around 3 msec, which is likely tolerable].
 
+Bluetooth pairing:
+https://bluedot.readthedocs.io/en/latest/pairpipi.html#using-the-command-line
+Then use the connect MACADDRESS after pairing.
+
+aplay can play a wav file, and concurrent aplay will be mixed together!
+
+## Rust
+The default rust install is 1.63, which is old enough to cause problems, e.g. with eframe.
+Rustup is only available through snap, not through apt, so I installed that, then installed rustup.
+Currently, though rustup command is not found.
 
