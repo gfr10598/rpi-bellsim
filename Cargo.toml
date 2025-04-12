@@ -6,5 +6,6 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-egui_glow = "0.31.1"
+# rppal = { git = "https://github.com/golemparts/rppal.git" }
 rppal = "0.22.1"
+
